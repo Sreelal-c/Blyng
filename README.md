@@ -1,1 +1,1 @@
-# bootstrap-social-network-template
+# NChat - A simple social Media Platform

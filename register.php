@@ -88,7 +88,7 @@ $res=mysqli_query($db,$sql);
             <option value="CSM">CSM</option>
              <option value="BDM">BDM</option>
             <option value="Social Media">Social Media</option>
-            <option value="SEO">SEO</option>            
+            <option value="SEO">SEO Analyst</option>            
       </select>
       </div>   
     </div>
