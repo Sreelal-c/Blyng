@@ -40,11 +40,11 @@
       <div class="button-container">
         <button><span>Go</span></button>
       </div>
-      <div class="footer"><a href="#">Forgot your password?</a></div>
+      <div class="footer"><a href="register.php">Register New Account?</a></div>
     </form>
   </div>
-  <div class="card alt" style="background-color: #ADD8E6">
-    <div class="toggle"></div>
+ <!-- <div class="card alt" style="background-color: #ADD8E6">
+    <div class=""></div>
     <h1 class="title">Register
       <div class="close"></div>
     </h1>
@@ -68,7 +68,7 @@
         <button><span>Next</span></button>
       </div>
     </form>
-  </div>
+  </div>-->
 </div>
 <!-- Portfolio<a id="portfolio" href="http://andytran.me/" title="View my portfolio!"><i class="fa fa-link"></i></a>
 <!-- CodePen<a id="codepen" href="https://codepen.io/andytran/" title="Follow me!"><i class="fa fa-codepen"></i></a>-->

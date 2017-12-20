@@ -29,13 +29,7 @@ include("header.php");
           <!-- DIRECT CHAT WARNING -->
           
             <div class="box-header with-border">
-              <h3 class="box-title"> </h3>
-
-             
-               
-                
-                
-                
+              <h3 class="box-title"> </h3> 
               </div>
             </div>
             <!-- /.box-header -->
