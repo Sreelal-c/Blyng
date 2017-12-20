@@ -1,14 +1,26 @@
+<?php 
+$namerr=$emerr=$phnerr=$paserr=$cpaserr=$deserr=$generr=$doberr="";
+if (isset($_POST['submit'])) {
+$name=$_POST['name'];
+$email=$_POST['email'];
+$Phone=$_POST['Phone'];
+$password=$_POST['password'];
+$dob=$_POST['dd']."/".$_POST['mm']."/".$_POST['yyyy'];
+$gender=$_POST['gender'];
+$Designation=$_POST['Designation'];
+$db=mysqli_connect("localhost","root","","nchat");
+$sql=" INSERT INTO  register(name, emai, phone, password, dob, gender, designation) VALUES ('$name','$email','$phone','$password','$dob','$gender','$Designation') ";
+$res=mysqli_query($db,$sql);
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Sign Up Form</title>
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-
-      <link rel="stylesheet" href="css/loginstyle.css">
+  <link rel="stylesheet" href="css/loginstyle.css">
 
   
 </head>
@@ -72,7 +84,7 @@
       <div class="input-group input-group-icon">
          <select class="" id="sel1" name="Designation">
           <option>.......Select.......</option>
-            <option value="PHP">PHP</option>
+            <option value="PHP">PHP Developers</option>
             <option value="CSM">CSM</option>
              <option value="BDM">BDM</option>
             <option value="Social Media">Social Media</option>
@@ -87,7 +99,7 @@
         <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
       </div>
     </div>
-    <center><button style="font-size:24px;background-color: #ADD8E6; " name="submit" >Button <i class="fa fa-send-o"></i></button></center>
+    <center><button style="font-size:24px;background-color: #ADD8E6; " name="submit" >Sign Up<i class="fa fa-send-o"></i></button></center>
     <center><label for="terms"><a href="login.php" style="text-decoration:none;">I have aleady an account!</a></label></center>
   </form>
 </div>
@@ -97,21 +109,3 @@
 
 </body>
 </html>
-<?php 
-$namerr=$emerr=$phnerr=$paserr=$cpaserr=$deserr=$generr=$doberr="";
-if (isset($_POST['submit'])) {
-  # code...
-}
-$name=$_POST['name'];
-$email=$_POST['email'];
-$Phone=$_POST['Phone'];
-$password=$_POST['password'];
-$dob=$_POST['dd']."/".$_POST['mm']."/".$_POST['yyyy'];
-$gender=$_POST['gender'];
-$Designation=$_POST['Designation'];
-$db=mysqli_connect("localhost","root","","nchat");
-$sql=" INSERT INTO  register(name, emai, phone, password, dob, gender, designation) VALUES ('$name','$email','$phone','$password','$dob','$gender','$Designation') ";
-$res=mysqli_query($db,$sql);
-
-
- ?>

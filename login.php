@@ -19,7 +19,7 @@
 <!-- Mixins-->
 <!-- Pen Title-->
 <div class="pen-title">
-  <h1>-vity Corner Login </h1><span>chat <i class='fa fa-code'></i> by <a href='http://andytran.me' style="color: #ADD8E6">Basil & Sree lal</a></span>
+  <h1> -NChat Login </h1><span>chat <i class='fa fa-code'></i> by Basil & Sreelal</span>
 </div>
 <!--<div class="rerun"><a href="">Rerun Pen</a></div>-->
 <div class="container">
