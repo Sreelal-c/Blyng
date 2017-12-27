@@ -1,6 +1,6 @@
 <?php
   session_start();
-      require_once("./views/templates/header2.php");
+      //require_once("./views/templates/header2.php");
 ?>
 <link type="text/css" rel="stylesheet" href="style.css" />
 
@@ -15,12 +15,11 @@
     </div>
      
     <div id="chatbox"><?php
-if(file_exists("log.html") && filesize("log.html") > 0){
-    $handle = fopen("log.html", "r");
-    $contents = fread($handle, filesize("log.html"));
-    fclose($handle);
-     
-    echo $contents;
+        if(file_exists("log.html") && filesize("log.html") > 0){
+        $handle = fopen("log.html", "r");
+        $contents = fread($handle, filesize("log.html"));
+        fclose($handle);
+        echo $contents;
 }
 ?></div>
      
@@ -75,6 +74,6 @@ function loadLog(){
 
 <?php
   
-      require_once("./views/templates/footer1.php");
+     // require_once("./views/templates/footer1.php");
 
 ?>
