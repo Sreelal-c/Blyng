@@ -1,13 +1,29 @@
-header{
-  background-color: 	#ADD8E6;
-  color:#fff;
-  min-height: 20px;
-  padding-top: 3px;
-}
 
-header form{
-	float:right;
+#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
 }
+.navbar .nav-item.avatar .dropdown-toggle img {
+  height: 35px;
+}
+.btn-circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+      }
+      .btn-circle.btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 13px 13px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 25px;
+      }
+
 .user-body {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -45,16 +61,15 @@ header .logo{
 .btns{
 	background-color: 	#000000;
 }
-.nav,.navbar{
-		background-color:#E0FFFF;
-}
+
 .left{
 	float: right;
 	background-color: 	#ADD8E6;
 }
 
 .panel-heading{
-    background-image: linear-gradient(	#ADD8E6, 	#ADD8E6 60%,#E0FFFF);
+    padding: 5px;
+    background-color: rgb(62, 179, 247);
     color: #fff !important;
 }
 
@@ -175,16 +190,6 @@ header .logo{
 }
 
 
-footer{
-	background: 	#DCDCDC;
-	height: 190px;
-	color: #04519b;
-	font-weight: bold;
-	text-align: center;
-	padding-top: 40px;
-	margin-top: 30px;
-	border-top: 7px solid #ADD8E6;
-}
 
 .members .member-row{
 	border-bottom: 1px solid #ccc;
@@ -3698,6 +3703,35 @@ table.text-center th {
     text-align: center;
   }
 }
+
+.post-footer-option li{
+  float:left;
+  margin-right:50px;
+  padding-bottom:15px;
+}
+
+.post-footer-option li a{
+  color:#AFB4BD;
+  font-weight:500;
+  font-size:1.3rem;
+}
+
+.photo-profile{
+  border:1px solid #DDD;    
+}
+
+.anchor-username h4{
+  font-weight:bold;    
+}
+
+.anchor-time{
+  color:#ADB2BB;
+  font-size:1.2rem;
+}
+
+.post-footer-comment-wrapper{
+  background-color:#F6F7F8;
+}
 /*
  * Page: Invoice
  * -------------
@@ -3718,7 +3752,7 @@ table.text-center th {
  */
 .profile-user-img {
   margin: 0 auto;
-  width: 100px;
+  width: 50px;
   padding: 3px;
   border: 3px solid #d2d6de;
 }

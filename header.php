@@ -1,132 +1,83 @@
+<?php
+session_start();
+require_once "class_user.php";
+if(!isset($_SESSION['id']))
+ {
+   header('location:login.php');
+ }
+$user = new user();
+list($id,$name,$email,$gender,$status) = $user->getuserinfo($_SESSION['id']);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Dobble Social Network</title>
-
+    <title>NChat</title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
-  </head>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-  <body>
-
-  <header >
-    <div class="container" >
-      <img src="img/logo1.png" class="logo" alt="">
-      <form class="form-inline">
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputEmail3">search for friends</label>
-          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="search your friends">
-        </div>
-        <button type="submit" class="btn btn-primary">Search</button>
-         </form>
-  
-        <div class="left">
-            <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="img/user1.png" class="user-image" alt="user image" style="width: 50px;  border-radius: 50%">
-              <span class="hidden-xs">BASIL PV</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                 <img src="img/user1.png" class="user-image" alt="user image" style="width: 90px;  border-radius: 50%">
-
-                <p style="color: #000000">
-                  basilkinaoorpv@gmail.com</p>
-                  <small style="color: #000000">Phone number- 8138835055</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Messages</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#"></a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="uprofile.php" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </div>
-        </div>
-
-       <!-- <div class="form-group">
-          <label class="sr-only" for="exampleInputEmail3">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-        </div>-->
-        <!--<div class="form-group">
-          <label class="sr-only" for="exampleInputPassword3">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-default">Sign in</button><br>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Remember me
-          </label>
-        </div>-->
-     
-  </header>
-
-    <nav class="navbar " >
-
-      <div class="container" >
-        <div class="navbar-header" >
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-        </div>
-        <div id="navbar" class="collapse navbar-collapse" >
-          <ul class="nav navbar-nav"  >
-            <script>
+    <script>
            function scrollWin() {
             window.scrollBy(0, 100);
             }
             </script>
+  </head>
 
-            <li class="active"><a href="home.php"><i class="material-icons">home</i>Home</a></li>
-            <li><a href="members.php"><i class="material-icons">people</i> Friend Requests</a></li>
-            <li><a href="messages.php"><i class="material-icons">forum</i>Messages<span class="badge">17</span></a></li>
-            
-            <!--<li><a href="photos.html">Photos</a></li>-->
-            <li><a href="profile.php"><i class="material-icons">face</i>Profile</a></li>
+  <body>
 
-            
-
-
-
-
-            
-          </ul>
-          <a href=""></a></a>
-        </div><!--/.nav-collapse -->
-      </div>
-
-    </nav>
+  <header>
+  <nav class="mb-1 navbar navbar-expand-lg sticky-top navbar-dark indigo lighten-1">
+        <a class="navbar-brand" href="#">-NChat</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link waves-effect waves-light" href="home.php"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="friends.php"><i class="fa fa-users"></i>Friends</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="profile.php"><i class="fa fa-user"></i>Profile</a>
+                </li> 
+            </ul>
+        </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link waves-effect waves-light" href="messages.php"><i class="fa fa-envelope"></i>Messages <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="settings.php"><i class="fa fa-gear"></i> Settings</a>
+                </li>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/user.png" class="img-fluid rounded-circle z-depth-0">Sreelal C</a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-purple" aria-labelledby="navbarDropdownMenuLink-5" style="position: absolute;">
+                        <a class="dropdown-item waves-effect waves-light" href="#">Edit Profile</a>
+                        <a class="dropdown-item waves-effect waves-light" href="logout.php">Logout</a>
+                    </div>
+                </li>
+            </ul>
+          </div>
+         </div>
+       </nav>
+    </header>
+    <main>

@@ -41,7 +41,9 @@ include("header.php");
               <div class="panel-body">
                  <div class="row">
                    <div class="col-sm-2">
-                     <a href="profile.html" class="post-avatar thumbnail"><img src="img/user.png" alt=""><div class="text-center">DevUser1</div></a>
+                     <a href="profile.html" class="thumbnail">
+                       <img class="img img-responsive" width="60" height="60" src="img/user.png" alt=""><div class="text-center">DevUser1</div>
+                      </a>
                      <div class="likes text-center">7 Likes</div>
                    </div>
                    <div class="col-sm-10">
@@ -57,7 +59,7 @@ include("header.php");
                         <div class="form-group">
                           <input type="text" class="form-control" placeholder="enter comment">
                         </div>
-                        <button type="submit" class="btn btn-default">Add</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
                       </form>
                      </div>
                      <div class="clearfix"></div>
