@@ -5,7 +5,7 @@
             <!--First column-->
             <div class="col-md-6">
                 <h5 class="title">-Nchat </h5>
-                <p>Free to use social network.</p>
+                <p>A simple and free social media platform.</p>
             </div>
             <!--/.First column-->
 

@@ -8,6 +8,8 @@
             $("#comform").toggle();
         });
     });
+
+   
 </script>
 <section>
 <div class="container">
@@ -114,34 +116,33 @@
 <!-- ----------------------- ------------------------------- -->
 <!-- groups -->
 <div class="col-md-4">
-           
-            <div class="panel panel-default groups">
-              <div class="panel-heading">
-                <h3 class="panel-title">Latest Groups</h3>
-              </div>
-              <div class="panel-body">
-                <div class="group-item">
-                  <img src="img/group.png" alt="">
-                  <h4><a href="#" class="">Sample Group One</a></h4>
+<div class="card">
+      <h3 class="card-header primary-color white-text">Latest Groups</h3>
+       <div class="card-body">
+       <div class="group-item">
+                  <img src="img/group.png" width="50" height="50" alt="">
+                  <h5><a href="#" class="">Sample Group One</a></h5>
+                  <p>This is a paragraph of intro text, or whatever I want to call it.</p>
+        </div>
+         <div class="clearfix"></div>
+            <div class="group-item">
+                  <img src="img/group.png" width="50" height="50" alt="">
+                  <h5><a href="#" class="">Sample Group Two</a></h5>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
                 <div class="clearfix"></div>
                 <div class="group-item">
-                  <img src="img/group.png" alt="">
-                  <h4><a href="#" class="">Sample Group Two</a></h4>
-                  <p>This is a paragraph of intro text, or whatever I want to call it.</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="group-item">
-                  <img src="img/group.png" alt="">
-                  <h4><a href="#" class="">Sample Group Three</a></h4>
+                  <img src="img/group.png" width="50" height="50" alt="">
+                  <h5><a href="#" class="">Sample Group Three</a></h5>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
                 <div class="clearfix"></div>
                 <a href="#" class="btn btn-primary">View All Groups</a>
               </div>
             </div>
-          </div>
+      </div>
+  </div>         
+          
         </div>
       </div>
     </section>

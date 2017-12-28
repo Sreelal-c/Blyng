@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
 
 if ($valid) {
     $user = new user();
-    $status =  $user->register($name,$email,$password,$generr);
+    $status =  $user->register($name,$email,$password,$gender);
     if($status == true)
       header('location:login.php');
       else { ?>
