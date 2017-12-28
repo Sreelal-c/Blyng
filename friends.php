@@ -8,29 +8,25 @@ include("header.php");
         <div class="row">
           <div class="col-md-8">
             <div class="members">
-              <h1 class="page-header">friend request</h1>
+              <h1 class="page-header">Friend Requests</h1>
               <div class="row member-row">
                 <div class="col-md-3">
-                  <img src="img/user.png" class="img-thumbnail" alt="">
-                  <div class="text-center">
-                    SomeUser01
-                  </div>
+                  <img src="img/user.png" class="img-thumbnail" width="100" height="100" alt="">
+                  <div class="text-center">User Name</div>
                 </div>
                 <div class="col-md-3">
-                  <p><a href="#" class="btn btn-success btn-block"><i class="fa fa-users"></i> c Friend</a></p>
+                  <p><a href="#" class="btn btn-success btn-block"><i class="fa fa-check"></i> Confirm</a></p>
                 </div>
                 <div class="col-md-3">
-                  <p><a href="#" class="btn btn-default btn-block"><i class="fa fa-envelope"></i> Send Message</a></p>
+                  <p><a href="#" class="btn btn-danger btn-block"><i class="fa fa-times"></i> Reject</a></p>
                 </div>
                 <div class="col-md-3">
-                  <p><a href="profile.html" class="btn btn-primary btn-block"><i class="fa fa-edit"></i> View Profile</a></p>
+                  <p><a href="profile.php" class="btn btn-primary btn-block">
+                      <i class="fa fa-external-link-square"></i> Profile</a>
+                  </p>
                 </div>
               </div>
-              
-             
-             
             </div>
-            
           </div>
           <div class="col-md-4">
             <div class="panel panel-default friends">

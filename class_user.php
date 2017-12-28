@@ -62,7 +62,9 @@ class user{
     }
 
     public function post($userid, $content, $image){
-        //insert into database
+        $query = "INSERT INTO posts(userid,post,image) VALUES($userid,$content,$image)";
+        $result = $this->db->query($query);
+
     }
 
     public function like($userid,$postid){
@@ -78,8 +80,17 @@ class user{
         $query = "SELECT * FROM register WHERE loginid= '$this->id' ";
         $result = $this->db->query($query);
         $row = $result->fetch_assoc();
-        $values = array("0"=>$row['loginid'],"1"=>$row['name'],"2"=>$row['email'],"3"=>$row['gender'],"4"=>$row['status']);
+        $values = array("0"=>$row['loginid'],"1"=>$row['name'],"2"=>$row['email'],"3"=>$row['gender'],"4"=>$row['status'],"5"=>$row['photo']);
         return $values;
+    }
+
+    public function updateinfo($id,$name,$email,$password,$gender){
+        $query = "UPDATE register SET name='$name', email='$email', password='$password', gender='$gender' WHERE loginid= '$id' ";
+        $result = $this->db->query($query);
+        if($result) 
+            return true;
+        else 
+            return false;
     }
 }
 
