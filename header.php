@@ -40,8 +40,8 @@ $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
   <body>
 
   <header>
-  <nav class="mb-1 navbar navbar-expand-lg sticky-top navbar-dark blue lighten-1">
-        <a class="navbar-brand" href="#">-NChat</a>
+  <nav class="mb-1 navbar navbar-expand-lg fixed-top navbar-dark blue lighten-1">
+        <a class="navbar-brand" href="#">-Nchat</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,7 +54,7 @@ $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
                     <a class="nav-link waves-effect waves-light" href="friends.php"><i class="fa fa-users"></i>Friends</a>
                 </li>
                 <li class="nav-item <?php if($file=='profile') echo 'active' ; ?>">
-                    <a class="nav-link waves-effect waves-light" href="profile.php"><i class="fa fa-user"></i>Profile</a>
+                    <a class="nav-link waves-effect waves-light" href="profile.php"><i class="fa fa-user"></i>My Profile</a>
                 </li>
                 <li class="nav-item <?php if($file=='groups') echo 'active' ; ?>">
                     <a class="nav-link waves-effect waves-light" href="groups.php"><i class="fa fa-dot-circle-o"></i>Groups</a>
@@ -66,16 +66,19 @@ $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
                 <li class="nav-item <?php if($file=='messages') echo 'active' ; ?>">
                     <a class="nav-link waves-effect waves-light" href="messages.php"><i class="fa fa-envelope"></i>Messages <span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item <?php if($file=='settings') echo 'active' ; ?>">
-                    <a class="nav-link waves-effect waves-light" href="settings.php"><i class="fa fa-gear"></i> Settings</a>
+                <li class="nav-item <?php if($file=='edit') echo 'active' ; ?>">
+                    <a class="nav-link waves-effect waves-light" href="edit.php"><i class="fa fa-gear"></i>Edit Proile</a>
                 </li>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 
                 <li class="nav-item avatar dropdown">
                     <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="img/user.png" class="img-fluid rounded-circle z-depth-0"><?php echo $name; ?></a>
+                    <?php if($photo!="") echo "<img src='upload/".$photo."' class='img-thumbnail img-fluid rounded-circle z-depth-0' alt=''>";
+                      else echo "<img src='img/user.png' class='img-thumbnail img-fluid rounded-circle z-depth-0' alt=''>" ;
+                    ?>
+                 <?php echo "  ".strtoupper($name); ?></a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-purple" aria-labelledby="navbarDropdownMenuLink-5" style="position: absolute;">
-                        <a class="dropdown-item waves-effect waves-light" href="settings.php">Edit Profile</a>
+                        <a class="dropdown-item waves-effect waves-light" href="settings.php">Settings</a>
                         <a class="dropdown-item waves-effect waves-light" href="logout.php">Logout</a>
                     </div>
                 </li>
@@ -84,4 +87,5 @@ $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
          </div>
        </nav>
     </header>
+    <body>
     <main>

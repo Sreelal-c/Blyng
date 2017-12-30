@@ -1,4 +1,5 @@
 </main>
+</body>
 <footer class="page-footer blue center-on-small-only">
     <div class="container">
         <div class="row">
@@ -42,5 +43,5 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-  </body>
+
 </html>
