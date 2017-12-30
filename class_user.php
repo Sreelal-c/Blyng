@@ -85,13 +85,78 @@ class user{
     }
 
     public function updateinfo($id,$name,$email,$password,$gender){
-        $query = "UPDATE register SET name='$name', email='$email', password='$password', gender='$gender' WHERE loginid= '$id' ";
+        $pass = sha1($password);
+        $query = "UPDATE register SET name='$name', email='$email', password='$pass', gender='$gender' WHERE loginid= '$id' ";
         $result = $this->db->query($query);
         if($result) 
             return true;
         else 
             return false;
     }
+
+    public function sendfriendrequest($sender,$receiver){
+        $q1 = "SELECT * FROM friendlist where (sendid='$sender' AND recid = '$receiver') OR ( sendid='$receiver' AND recid = '$sender') " ;
+        $r1 = $this->db->query($q1);
+        if($r1->num_rows>0){
+            $row1 = $r1->fetch_assoc();
+            if($row1['status']==1)
+                return 1;  // already friends
+            else  if($row1['status']==2) 
+                    return 2; // rejected already
+        }
+        else {
+        $query = "INSERT INTO friendlist(sendid,recid,status) values('$sender','$receiver','0')";
+        $result = $this->db->query($query);
+        if($result) 
+            return true;
+        else 
+            return false;
+        }
+    }
+
+    public function confirm_friend_request($receiver,$sender) {
+        $query = "UPDATE friendlist SET status = 1 WHERE (sendid='$sender' AND recid = '$receiver') OR ( sendid='$receiver' AND recid = '$sender')";
+        $result = $this->db->query($query);
+        if($result) 
+            return true;
+        else 
+            return false;
+        }
+        public function get_friends_list($id){
+            $query = "SELECT * FROM friendlist  INNER JOIN register 
+            ON friendlist.recid=register.loginid 
+            WHERE (friendlist.sendid='$id' OR friendlist.recid = '$id') AND friendlist.status = '1'";
+            $result = $this->db->query($query);
+            if($result) 
+                return $result->fetch_assoc();
+            else 
+                return false;
+            }
+    
 }
 
+class friendship extends user{
+    private $conn;
+    public function __construct()
+    {
+        // call user's constructor
+        parent::__construct();
+        $this->conn = user::$db;
+
+    }
+
+    public function get_friends_list($id){
+        $query = "SELECT * FROM friendlist  INNER JOIN register 
+        ON friendlist.recid=register.loginid 
+        WHERE (friendlist.sendid='$id' OR friendlist.recid = '$id') AND friendlist.status = '1'";
+        $result = $this->conn->query($query);
+        if($result) {
+            $row = $result->fetch_assoc();
+            return $row;
+        }
+        else 
+            return false;
+        }
+    
+}
 ?>

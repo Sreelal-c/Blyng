@@ -1,6 +1,11 @@
 
 <?php
 include("header.php");
+/*
+if(isset($_GET['profileid'])) {
+  list($id,$name,$email,$gender,$status,$photo) = $user->getuserinfo($_GET['profileid']);
+}
+*/
 ?>
 
     <section>
@@ -14,7 +19,7 @@ include("header.php");
                 </button>
             </div>
             <div class="modal-body">
-            <form id="post" action="" method="post" enctype="multipart/form-data">
+            <form id="uploadimage"  action="" method="post" enctype="multipart/form-data">
             <div id="image_preview" ><center><img id="previewing" src="img/imgfall.png" /></center></div>
             <hr id="line">
             <h6>Select an image</h6>
@@ -34,7 +39,7 @@ include("header.php");
         <div class="row">
           <div class="col-md-8">
             <div class="profile">
-              <h1 class="page-header"><?php echo $name; ?></h1>
+              <h1 class="page-header"><?php echo strtoupper($name); ?></h1>
               <div class="row">
                 <div class="col-md-4">
                 <?php if($photo!="") echo "<img src='upload/".$photo."' class='img-thumbnail' alt=''>";

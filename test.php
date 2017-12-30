@@ -10,7 +10,7 @@ if($status == true)
     }
 */
 
-$user2 = new user();
+/*$user2 = new user();
 list($status,$id) = $user2->login("sreelal.ub@gmail.com","password");
 if($status == true)
     echo "<br/>Login is success. Login id: ". $id. "</br>";
@@ -21,5 +21,6 @@ if($status == true)
 $user = new user();
 list($id,$name,$email,$gender,$status) = $user->getuserinfo('5');
 echo "Get user info: (id,name,email,gender,status)  ". $id.", ".$name.",  ".$email.",   ".$gender.",   ".$status."<br/>";
-
+*/
+echo sha1(123);
 ?>
