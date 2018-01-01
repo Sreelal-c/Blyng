@@ -12,7 +12,7 @@ $receiver = $_GET['receiver'];
 $user = new user();
 $status = $user->sendfriendrequest($sender,$receiver);
 switch($status){
-    case true : header('location:../friends.php?fmsg=success');
+    case true : header('location:../friends.php?fmsg=success&person='.$receiver);
                 break;
     case false : header('location:../friends.php?fmsg=fail');
                 break;
@@ -26,7 +26,6 @@ switch($status){
 else if($code==2){
     $sender = $_GET['sender'];
     $receiver = $_GET['receiver'];
-    
     $user = new user();
     $status = $user->confirm_friend_request($receiver,$sender);
     switch($status){
@@ -45,6 +44,7 @@ else echo "invalid code";
 }
 
 else {
-    echo "Please Login";
+    //echo "Please Login";
+    header('locaion:../login.php');
 }
 ?>

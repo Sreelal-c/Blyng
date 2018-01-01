@@ -27,8 +27,9 @@ var imagefile = file.type;
 var match= ["image/jpeg","image/png","image/jpg"];
 if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2])))
 {
-$('#previewing').attr('src','noimage.png');
-$("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only jpeg, jpg and png Images type allowed</span>");
+$('#previewing').attr('src','assets/img/imgfall.png');
+$("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+
+"<span id='error_message' style='color:red'>Only jpeg, jpg and png Images type allowed</span>");
 return false;
 }
 else

@@ -3,7 +3,6 @@ include "include/header.php";
 if(isset($_GET['profileid'])) {
     list($id,$name,$email,$gender,$status,$photo) = $user->getuserinfo($_GET['profileid']);
   }
-
 ?>
 
 <style type="text/css">

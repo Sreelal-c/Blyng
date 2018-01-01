@@ -11,21 +11,32 @@ if(isset($_FILES["file"]["type"]))
 
     if (in_array($file_ext,$allowed_file_types) && ($file_size<1024*1000))
     {
-        	$newfilename = rand(1000,1000000) . $file_ext;
-        	 move_uploaded_file($_FILES['file']['tmp_name'], "../upload/" . $newfilename);
+            $newfilename = rand(1000,1000000) . $file_ext;
+            //move the new uploaded file
+             move_uploaded_file($_FILES['file']['tmp_name'], "../upload/" . $newfilename);
+             $query = "SELECT photo from register where loginid='$id'";
+             $r = $conn->query($query);
+             if($r) { $d = $r->fetch_assoc(); 
+                // check if the old file name exists
+                if(file_exists('../upload/'.$d['photo']))
+                        // delete the old file if it exists
+                        if(!unlink('../upload/'.$d['photo'])) 
+                            { echo "Error deleting file"; } ;
+                    }
+                // update the table with new file name
 	 		 $sql = "UPDATE register SET photo='$newfilename' WHERE loginid='$id' ";
              $result = $conn->query($sql);
-                if ($result) echo "Successfully uploaded photo. Please refresh your browser";       
+                if ($result) echo "<p style='color:green'><br/>Successfully updated your profile picture. Please refresh your browser</p>";       
 		
     }
     else
         {
-        echo "<span id='invalid'>Failed! File is not an image or large image size<span>";
+        echo "<span id='invalid' style='color:red'><br/>Failed! File is not an image or large image size<span>";
         }
     }
 else
 {
-echo "<span id='invalid'>Please select a file to be uploaded<span>";
+echo "<span id='invalid'><br/>Please select a file to be uploaded<span>";
 }
 
 ?>

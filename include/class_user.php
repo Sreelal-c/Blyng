@@ -29,7 +29,8 @@ class user{
         $this->password = sha1($password);
         $this->gender = $gender;
 
-        $query = "INSERT INTO register(name,email,password,gender,status) VALUES('$this->name','$this->email','$this->password','$this->gender','1')";
+        $query = "INSERT INTO register(name,email,password,gender,status) 
+        VALUES('$this->name','$this->email','$this->password','$this->gender','1')";
         $res = $this->db->query($query);
         if($res)
             return true;

@@ -12,12 +12,18 @@ $.notifyDefaults({
 	url_target: "_self"
 });
 $.notify({
-	message: "<strong>Success!</strong> Friend Request has been sent",
-  url: "profile.php"
-  
-}, {
-	type: 'success'
-});
+    icon: 'fa fa-check',
+	  message: "<strong>Success!</strong> Friend Request has been sent",
+    url: "profile.php"
+    },{
+    type: 'success'
+    },
+    {
+    animate: {
+		enter: 'animated bounceIn',
+		exit: 'animated bounceOut'
+    }}
+    );
 </script>
 
 <!--
