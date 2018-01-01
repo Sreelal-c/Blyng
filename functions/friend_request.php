@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['id'])){
-include_once "../class_user.php";
+include_once "../include/class_user.php";
 if(isset($_GET['code']))
 $code = $_GET['code'];
 else $code = 0;

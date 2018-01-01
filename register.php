@@ -1,5 +1,5 @@
 <?php 
-require_once "class_user.php";
+require_once "include/class_user.php";
 $namerr=$emerr=$paserr=$cpaserr=$generr=$doberr=$chcerr=$msg1=$nameErr1="";
 $valid=true;
 if (isset($_POST['submit'])) {
@@ -84,7 +84,7 @@ if ($valid) {
   <title>Sign Up Form</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="sign-up-form/css/style.css">
+  <link rel="stylesheet" href="assets/css/register.css">
   <style type="text/css">
     span{
       color:red;
@@ -147,8 +147,8 @@ if ($valid) {
   </form>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <script  src="sign-up-form/js/index.js"></script>
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <script  src="assets/js/register.js"></script>
 
 </body>
 </html>

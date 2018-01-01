@@ -1,6 +1,6 @@
  
 <?php
-include("header.php");
+include("include/header.php");
 ?>
 
 <script type="text/javascript">
@@ -44,7 +44,7 @@ include("header.php");
                     <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                   </div>
                   <!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <img class="direct-chat-img" src="assets/img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     Is this template really for free? That's unbelievable!
                   </div>
@@ -59,7 +59,7 @@ include("header.php");
                     <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                   </div>
                   <!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <img class="direct-chat-img" src="assets/img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
                   <div class="direct-chat-text" style="background-color: #ADD8E6">
                     You better believe it!
                   </div>
@@ -74,7 +74,7 @@ include("header.php");
                     <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                   </div>
                   <!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <img class="direct-chat-img" src="assets/img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
                   <div class="direct-chat-text" style="background-color: #ADD8E6">
                     You better believe it!
                   </div>
@@ -87,7 +87,7 @@ include("header.php");
                     <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                   </div>
                   <!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <img class="direct-chat-img" src="assets/img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
                   <div class="direct-chat-text" style="background-color: #ADD8E6">
                     You better believe it!
                   </div>
@@ -100,7 +100,7 @@ include("header.php");
                     <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                   </div>
                   <!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <img class="direct-chat-img" src="assets/img/user1.png" alt="Message User Image"><!-- /.direct-chat-img -->
                   <div class="direct-chat-text" style="background-color: #ADD8E6">
                     You better believe it!
                   </div>
@@ -119,7 +119,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -139,7 +139,7 @@ include("header.php");
 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -160,7 +160,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -182,7 +182,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -203,7 +203,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -223,28 +223,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
-
-                      <div class="contacts-list-info">
-                            <span class="contacts-list-name">
-                              Count Dracula
-                              <small class="contacts-list-date pull-right">2/28/2015</small>
-                            </span>
-                        <span class="contacts-list-msg">How have you been? I was...</span>
-                      </div>
-                      <!-- /.contacts-list-info -->
-                    </a>
-                    <div class="clearfix" style="outline-color: #000000"></div>
-                  </li>
-
-                  <!-- End Contact Item -->
-                </ul>
-
-
-                <ul class="contacts-list">
-                  <li>
-                    <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -265,7 +244,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -286,7 +265,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -307,7 +286,28 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
+
+                      <div class="contacts-list-info">
+                            <span class="contacts-list-name">
+                              Count Dracula
+                              <small class="contacts-list-date pull-right">2/28/2015</small>
+                            </span>
+                        <span class="contacts-list-msg">How have you been? I was...</span>
+                      </div>
+                      <!-- /.contacts-list-info -->
+                    </a>
+                    <div class="clearfix" style="outline-color: #000000"></div>
+                  </li>
+
+                  <!-- End Contact Item -->
+                </ul>
+
+
+                <ul class="contacts-list">
+                  <li>
+                    <a href="#">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -327,7 +327,7 @@ include("header.php");
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="img/user1.png" alt="User Image">
+                      <img class="contacts-list-img" src="assets/img/user1.png" alt="User Image">
 
                       <div class="contacts-list-info">
                             <span class="contacts-list-name">
@@ -373,5 +373,5 @@ include("header.php");
     </section>
 
 <?php
-include("footer.php");
+include("include/footer.php");
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "include/header.php";
 $namerr=$emerr=$paserr=$cpaserr=$generr=$doberr=$chcerr=$msg1=$nameErr1="";
 $valid=true;
 if (isset($_POST['submit'])) {
@@ -127,4 +127,4 @@ if ($valid) {
     </form>
 </div>
 </div>
-<?php include "footer.php"; ?>
+<?php include "include/footer.php"; ?>

@@ -368,14 +368,14 @@ body {
 }
 
 .card .footer a {
-  color: inherit;
+  color: rgb(84, 150, 84);
   text-decoration: none;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
 .card .footer a:hover {
-  color: #bababa;
+  color: #26490e;
 }
 
 .card.alt {
