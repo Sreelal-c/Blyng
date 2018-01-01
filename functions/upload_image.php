@@ -12,16 +12,20 @@ if(isset($_FILES["file"]["type"]))
     if (in_array($file_ext,$allowed_file_types) && ($file_size<1024*1000))
     {
         	$newfilename = rand(1000,1000000) . $file_ext;
-        	 move_uploaded_file($_FILES['file']['tmp_name'], "upload/" . $newfilename);
+        	 move_uploaded_file($_FILES['file']['tmp_name'], "../upload/" . $newfilename);
 	 		 $sql = "UPDATE register SET photo='$newfilename' WHERE loginid='$id' ";
              $result = $conn->query($sql);
-                if ($result) echo "Successfully updated. Please refresh your browser";       
+                if ($result) echo "Successfully uploaded photo. Please refresh your browser";       
 		
-	}
-}
+    }
+    else
+        {
+        echo "<span id='invalid'>Failed! File is not an image or large image size<span>";
+        }
+    }
 else
 {
-echo "<span id='invalid'>***Invalid file Size or Type***<span>";
+echo "<span id='invalid'>Please select a file to be uploaded<span>";
 }
 
 ?>

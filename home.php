@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include "include/header.php"; ?>
 <script>
     $(document).ready(function(){
       $("#comform").hide();
@@ -47,7 +47,7 @@
             </div>
             <div class="modal-body">
             <form action="" method="post" enctype="multipart/form-data">
-            <div id="image_preview" ><center><img id="previewing" src="img/imgfall.png" /></center></div>
+            <div id="image_preview" ><center><img id="previewing" src="assets/img/imgfall.png" /></center></div>
             <hr id="line">
             <h6>Select an image</h6>
             <input type="file" name="file" id="file" required  name="img" />
@@ -66,7 +66,7 @@
        <div class="row">
          <div class="col-sm-2">
            <a href="profile.html" class="thumbnail">
-             <img class="img img-responsive" width="60" height="60" src="img/user.png" alt=""><div class="text-center">DevUser1</div>
+             <img class="img img-responsive" width="60" height="60" src="assets/img/user.png" alt=""><div class="text-center">DevUser1</div>
             </a>
            <div class="likes text-center">7 Likes</div>
          </div>
@@ -90,14 +90,14 @@
 
            <div class="comments">
              <div class="comment">
-               <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
+               <a href="#" class="comment-avatar pull-left"><img src="assets/img/user.png" alt=""></a>
                <div class="comment-text">
                  <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
                </div>
              </div>
              <div class="clearfix"></div>
              <div class="comment">
-               <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
+               <a href="#" class="comment-avatar pull-left"><img src="assets/img/user.png" alt=""></a>
                <div class="comment-text">
                  <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
                </div>
@@ -120,19 +120,19 @@
       <h3 class="card-header primary-color white-text">Latest Groups</h3>
        <div class="card-body">
        <div class="group-item">
-                  <img src="img/group.png" width="50" height="50" alt="">
+                  <img src="assets/img/group.png" width="50" height="50" alt="">
                   <h5><a href="#" class="">Sample Group One</a></h5>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
         </div>
          <div class="clearfix"></div>
             <div class="group-item">
-                  <img src="img/group.png" width="50" height="50" alt="">
+                  <img src="assets/img/group.png" width="50" height="50" alt="">
                   <h5><a href="#" class="">Sample Group Two</a></h5>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
                 <div class="clearfix"></div>
                 <div class="group-item">
-                  <img src="img/group.png" width="50" height="50" alt="">
+                  <img src="assets/img/group.png" width="50" height="50" alt="">
                   <h5><a href="#" class="">Sample Group Three</a></h5>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
@@ -148,5 +148,5 @@
     </section>
 
    <?php
-include("footer.php");
+include("include/footer.php");
 ?>

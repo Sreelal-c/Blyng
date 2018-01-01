@@ -1,5 +1,5 @@
 <?php
-require_once "class_user.php";
+require_once "include/class_user.php";
 if(isset($_POST['submit'])){
 $email=$_POST['email'];
 $password=trim($_POST['password']);
@@ -25,7 +25,7 @@ else { ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="material-login-form/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
@@ -55,6 +55,6 @@ else { ?>
   </div>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script  src="material-login-form/js/index.js"></script>
+<script  src="assets/js/login.js"></script>
 </body>
 </html>

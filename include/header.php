@@ -3,7 +3,7 @@ session_start();
 require_once "class_user.php";
 if(!isset($_SESSION['id']))
  {
-   header('location:login.php');
+   header('location:../login.php');
  }
 $user = new user();
 list($id,$name,$email,$gender,$status,$photo) = $user->getuserinfo($_SESSION['id']);
@@ -19,17 +19,18 @@ $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/mdb.min.css" rel="stylesheet">
+    
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/script.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bootstrap-notify.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
            function scrollWin() {
             window.scrollBy(0, 100);
@@ -74,7 +75,7 @@ $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
                 <li class="nav-item avatar dropdown">
                     <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php if($photo!="") echo "<img src='upload/".$photo."' class='img-thumbnail img-fluid rounded-circle z-depth-0' alt=''>";
-                      else echo "<img src='img/user.png' class='img-thumbnail img-fluid rounded-circle z-depth-0' alt=''>" ;
+                      else echo "<img src='assets/img/user.png' class='img-thumbnail img-fluid rounded-circle z-depth-0' alt=''>" ;
                     ?>
                  <?php echo "  ".strtoupper($name); ?></a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-purple" aria-labelledby="navbarDropdownMenuLink-5" style="position: absolute;">

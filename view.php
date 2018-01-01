@@ -1,5 +1,5 @@
 <?php 
-include "header.php"; 
+include "include/header.php"; 
 if(isset($_GET['profileid'])) {
     list($id,$name,$email,$gender,$status,$photo) = $user->getuserinfo($_GET['profileid']);
   }
@@ -227,13 +227,13 @@ if(isset($_GET['profileid'])) {
                             <div class="text-center">
                                 <div class="row">
                                     <div class="col-md-3 col-md-offset-1">
-                                        <h5>12<br /><small>Files</small></h5>
+                                        <h5>12<br /><small>Friends</small></h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <h5>2GB<br /><small>Used</small></h5>
+                                        <h5>2<br /><small>Mutual Friends</small></h5>
                                     </div>
-                                    <div class="col-md-3">
-                                        <h5>24,6$<br /><small>Spent</small></h5>
+                                    <div class="col-md-4">
+                                        <h5>3.12 PM<br /><small>Last Online</small></h5>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +306,7 @@ if(isset($_GET['profileid'])) {
                         <div class="card">
                            
                             <div class="header">
-                                <h4 class="title"><?php echo $name."'s Timeline";?></h4>
+                                <h4 class="title"><?php echo "Timeline";?></h4>
                             </div>
                             <div class="content">
         <!-- ---------- posts --------------------------- -->              
@@ -374,4 +374,4 @@ if(isset($_GET['profileid'])) {
                 </div>
             </div>
         </div>
-<?php include "footer.php"; ?>
+<?php include "include/footer.php"; ?>

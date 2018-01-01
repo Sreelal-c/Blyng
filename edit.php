@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include "include/header.php"; ?>
 <style type="text/css">
 .card {
   border-radius: 6px;
@@ -191,12 +191,12 @@
                     <div class="col-lg-4 col-md-5">
                         <div class="card card-user">
                             <div class="image">
-                                <img src="img/background.jpg" alt="..."/>
+                                <img src="assets/img/background.jpg" alt="..."/>
                             </div>
                             <div class="content">
                                 <div class="author">
                                 <?php if($photo!="") echo "<img src='upload/".$photo."' class='avatar border-white '  alt=''>";
-                      else echo "<img src='img/user.png'  class='avatar border-white' alt=''>" ;
+                      else echo "<img src='assets/img/user.png'  class='avatar border-white' alt=''>" ;
                  ?>
                                   
                                   <h4 class="title"><?php echo $name; ?><br />
@@ -234,7 +234,7 @@
                                                 <div class="row">
                                                     <div class="col-xs-3">
                                                         <div class="avatar">
-                                                            <img src="img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                            <img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6">
@@ -252,7 +252,7 @@
                                                 <div class="row">
                                                     <div class="col-xs-3">
                                                         <div class="avatar">
-                                                            <img src="img/faces/face-1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                            <img src="assets/img/faces/face-1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6">
@@ -270,7 +270,7 @@
                                                 <div class="row">
                                                     <div class="col-xs-3">
                                                         <div class="avatar">
-                                                            <img src="img/faces/face-3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                            <img src="assets/img/faces/face-3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6">
@@ -312,25 +312,10 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Password</label>
-                                                <input type="password" class="form-control border-input"  value="Chet">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>confirm Password</label>
-                                                <input type="password" class="form-control border-input"  value="Faker">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control border-input" placeholder="Home Address" value="Melbourne, Australia">
+                                                <label>Date of Birth</label>
+                                                <input type="date" class="form-control border-input" placeholder="Home Address" value="Melbourne, Australia">
                                             </div>
                                         </div>
                                     </div>
@@ -360,7 +345,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>About Me</label>
-                                                <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
+                                                <textarea rows="12" class="form-control border-input" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
 You doubt I'll bother, reading into it
 I'll probably won't, left to my own devices
 But that's the difference in our opinions.</textarea>
@@ -380,4 +365,4 @@ But that's the difference in our opinions.</textarea>
                 </div>
             </div>
         </div>
-<?php include "footer.php"; ?>
+<?php include "include/footer.php"; ?>

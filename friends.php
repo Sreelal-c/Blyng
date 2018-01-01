@@ -1,17 +1,33 @@
 
 <?php
-include("header.php");
+include("include/header.php");
 $conn = new mysqli("localhost", "root", "","nchat");
 if(isset($_GET['fmsg'])){
   $fmsg = $_GET['fmsg'];
   if($fmsg=="success") {
 ?>
+
+<script type="text/javascript">
+$.notifyDefaults({
+	url_target: "_self"
+});
+$.notify({
+	message: "<strong>Success!</strong> Friend Request has been sent",
+  url: "profile.php"
+  
+}, {
+	type: 'success'
+});
+</script>
+
+<!--
 <div class="alert alert-success alert-dismissible fade show container" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
   <strong>Success!</strong> Request has been sent.
 </div>
+  -->
   <?php 
   } 
   else if($fmsg=="fail") {
@@ -52,23 +68,26 @@ if(isset($_GET['fmsg'])){
       <?php 
         //$friendlist = new friendship();
         $friends = $user->get_friends_list($id);
-        if($friends!=false){
+        if($friends){
+          //echo var_dump($friends);
+          while($f = $friends->fetch_assoc()){
+            //var_dump($f);
           ?>
           <div class="members">
             <div class="row member-row">
               <div class="col-md-2">
-              <?php if($friends['photo']!="") echo "<img src='upload/".$friends['photo']."' class='img-thumbnail' width='60' height='60' alt=''>";
+              <?php if($f['photo']!="") echo "<img src='upload/".$f['photo']."' class='img-thumbnail' width='60' height='60' alt=''>";
                         else echo "<img src='img/user.png' class='img-thumbnail'  width='100' height='100' alt=''>" ;
                    ?>
-                <div><b><?php echo $friends['name']; ?></b></div>
+                <div><b><?php echo $f['name']; ?></b></div>
               </div>
               <div class="col-md-3">
-                <p><a href="view.php?profileid=<?php echo $friends['loginid'] ?>" class="btn btn-primary btn-sm btn-block"><i class="fa fa-external-link-square"></i> Profile</a> </p>
+                <p><a href="view.php?profileid=<?php echo $f['loginid'] ?>" class="btn btn-primary btn-sm btn-block"><i class="fa fa-external-link-square"></i> Profile</a> </p>
               </div>
             </div> <!-- row -->
           </div> <!-- member -->
             <?php 
-                } 
+                } }
                  else echo "<div class='row member-row'><p><b> You have no friends </b></p></div>";
                 ?>
              
@@ -105,7 +124,7 @@ if(isset($_GET['fmsg'])){
           <div class="row member-row">
             <div class="col-md-3">
             <?php if($rows['photo']!="") { echo "<img src='upload/". $rows['photo']."' class='img-thumbnail' width='100' height='100' alt=''>" ; } else {?>
-              <img src="img/user.png" class="img-thumbnail" width="100" height="100" alt="">
+              <img src="assets/img/user.png" class="img-thumbnail" width="100" height="100" alt="">
             <?php } ?>
               <div><b><?php echo $rows['name']; ?></b> </div>
             </div>
@@ -129,7 +148,7 @@ if(isset($_GET['fmsg'])){
             </div>
             
             <div class="col-md-3">
-              <p><a href="profile.php" class="btn btn-primary btn-block"><i class="fa fa-external-link-square"></i> Profile</a> </p>
+              <p><a href="view.php?profileid=<?= $rows['loginid']?>" class="btn btn-primary btn-block"><i class="fa fa-external-link-square"></i> Profile</a> </p>
             </div>
           </div> <!-- row -->
         </div> <!-- member -->
@@ -163,7 +182,7 @@ if(isset($_GET['fmsg'])){
           <div class="row member-row">
             <div class="col-md-3">
             <?php if($r1['photo']!="") echo "<img src='upload/".$r1['photo']."' class='img-thumbnail' width='100' height='100' alt=''>";
-                      else echo "<img src='img/user.png' class='img-thumbnail'  width='100' height='100' alt=''>" ;
+                      else echo "<img src='assets/img/user.png' class='img-thumbnail'  width='100' height='100' alt=''>" ;
                  ?>
               <div class="text-center"><?php echo $r1['name']; ?></div>
             </div>
@@ -174,7 +193,7 @@ if(isset($_GET['fmsg'])){
               <p><a href="#" class="btn btn-danger btn-block"><i class="fa fa-times"></i> Reject</a></p>
             </div>
             <div class="col-md-3">
-              <p><a href="profile.php" class="btn btn-primary btn-block"><i class="fa fa-external-link-square"></i> Profile</a> </p>
+              <p><a href="view.php?profileid=<?= $r1['loginid']?>" class="btn btn-primary btn-block"><i class="fa fa-external-link-square"></i> Profile</a> </p>
             </div>
           </div> <!-- row -->
           <?php 
@@ -194,5 +213,5 @@ if(isset($_GET['fmsg'])){
 </section>
 
 <?php
-include("footer.php");
+include("include/footer.php");
 ?>

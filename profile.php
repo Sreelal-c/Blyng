@@ -1,6 +1,6 @@
 
 <?php
-include("header.php");
+include("include/header.php");
 /*
 if(isset($_GET['profileid'])) {
   list($id,$name,$email,$gender,$status,$photo) = $user->getuserinfo($_GET['profileid']);
@@ -20,7 +20,7 @@ if(isset($_GET['profileid'])) {
             </div>
             <div class="modal-body">
             <form id="uploadimage"  action="" method="post" enctype="multipart/form-data">
-            <div id="image_preview" ><center><img id="previewing" src="img/imgfall.png" /></center></div>
+            <div id="image_preview" ><center><img id="previewing" src="assets/img/imgfall.png" /></center></div>
             <hr id="line">
             <h6>Select an image</h6>
             <input type="file" name="file" id="file" required  name="img" />
@@ -43,14 +43,14 @@ if(isset($_GET['profileid'])) {
               <div class="row">
                 <div class="col-md-4">
                 <?php if($photo!="") echo "<img src='upload/".$photo."' class='img-thumbnail' alt=''>";
-                      else echo "<img src='img/user.png' class='img-thumbnail' alt=''>" ;
+                      else echo "<img src='assets/img/user.png' class='img-thumbnail' alt=''>" ;
                  ?>
                 </div>
                 <div class="col-md-8">
                   <ul>
-                    <li><strong>Name:</strong><?php echo "   ".strtoupper($name); ?></li>
-                    <li><strong>Email:</strong><?php echo "    ".strtolower($email); ?></li>
-                    <li><strong>Gender:</strong><?php echo "     ".strtoupper($gender); ?></li>
+                    <li><strong>Name:</strong><?= "   ".strtoupper($name); ?></li>
+                    <li><strong>Email:</strong><?= "    ".strtolower($email); ?></li>
+                    <li><strong>Gender:</strong><?=  "     ".strtoupper($gender); ?></li>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
               Change Profile Photo
           </button>
@@ -75,7 +75,7 @@ if(isset($_GET['profileid'])) {
                  <div class="row">
                    <div class="col-sm-2">
                      <a href="profile.html" class="thumbnail">
-                       <img class="img img-responsive" width="60" height="60" src="img/user.png" alt=""><div class="text-center">DevUser1</div>
+                       <img class="img img-responsive" width="60" height="60" src="assets/img/user.png" alt=""><div class="text-center">DevUser1</div>
                       </a>
                      <div class="likes text-center">7 Likes</div>
                    </div>
@@ -99,14 +99,14 @@ if(isset($_GET['profileid'])) {
 
                      <div class="comments">
                        <div class="comment">
-                         <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
+                         <a href="#" class="comment-avatar pull-left"><img src="assets/img/user.png" alt=""></a>
                          <div class="comment-text">
                            <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
                          </div>
                        </div>
                        <div class="clearfix"></div>
                        <div class="comment">
-                         <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
+                         <a href="#" class="comment-avatar pull-left"><img src="assets/img/user.png" alt=""></a>
                          <div class="comment-text">
                            <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
                          </div>
@@ -126,15 +126,15 @@ if(isset($_GET['profileid'])) {
               </div>
               <div class="panel-body">
                 <ul>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user.png" alt=""></a></li>
                 </ul>
                 <div class="clearfix"></div>
                 <a class="btn btn-primary" href="#">View All Friends</a>
@@ -148,19 +148,19 @@ if(isset($_GET['profileid'])) {
                   <h3 class="card-header primary-color white-text">Latest Groups</h3>
                    <div class="card-body">
                    <div class="group-item">
-                              <img src="img/group.png" width="50" height="50" alt="">
+                              <img src="assets/img/group.png" width="50" height="50" alt="">
                               <h5><a href="#" class="">Sample Group One</a></h5>
                               <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                     </div>
                      <div class="clearfix"></div>
                         <div class="group-item">
-                              <img src="img/group.png" width="50" height="50" alt="">
+                              <img src="assets/img/group.png" width="50" height="50" alt="">
                               <h5><a href="#" class="">Sample Group Two</a></h5>
                               <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                             </div>
                             <div class="clearfix"></div>
                             <div class="group-item">
-                              <img src="img/group.png" width="50" height="50" alt="">
+                              <img src="assets/img/group.png" width="50" height="50" alt="">
                               <h5><a href="#" class="">Sample Group Three</a></h5>
                               <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                             </div>
@@ -176,5 +176,5 @@ if(isset($_GET['profileid'])) {
 
     
 <?php
-include("footer.php");
+include("include/footer.php");
 ?>

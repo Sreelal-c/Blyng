@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include "include/header.php"; ?>
     <section>
       <div class="container">
         <div class="row">
@@ -6,7 +6,7 @@
             <div class="groups">
               <h1 class="page-header">Groups</h1>
               <div class="group-item">
-                <img src="img/group.png" alt="">
+                <img src="assets/img/group.png" alt="">
                 <h4><a href="#">Sample Group One</a></h4>
                 <p>Actually we will just write a quick paragraph. This is a sample Dobble social network group.</p>
                 <p>
@@ -15,7 +15,7 @@
               </div>
               <div class="clearfix"></div>
               <div class="group-item">
-                <img src="img/group.png" alt="">
+                <img src="assets/img/group.png" alt="">
                 <h4><a href="#">Sample Group Two</a></h4>
                 <p>Actually we will just write a quick paragraph. This is a sample Dobble social network group.</p>
                 <p>
@@ -24,7 +24,7 @@
               </div>
               <div class="clearfix"></div>
               <div class="group-item">
-                <img src="img/group.png" alt="">
+                <img src="assets/img/group.png" alt="">
                 <h4><a href="#">Sample Group Three</a></h4>
                 <p>Actually we will just write a quick paragraph. This is a sample Dobble social network group.</p>
                 <p>
@@ -49,15 +49,15 @@
               </div>
               <div class="panel-body">
                 <ul>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
+                  <li><a href="profile.html" class="thumbnail"><img src="assets/img/user1.png" alt=""></a></li>
                 </ul>
                 <div class="clearfix"></div>
                 <a class="btn btn-primary" href="#">View All Friends</a>
@@ -69,19 +69,19 @@
               </div>
               <div class="panel-body">
                 <div class="group-item">
-                  <img src="img/group.png" alt="">
+                  <img src="assets/img/group.png" alt="">
                   <h4><a href="#" class="">Sample Group One</a></h4>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
                 <div class="clearfix"></div>
                 <div class="group-item">
-                  <img src="img/group.png" alt="">
+                  <img src="assets/img/group.png" alt="">
                   <h4><a href="#" class="">Sample Group Two</a></h4>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
                 <div class="clearfix"></div>
                 <div class="group-item">
-                  <img src="img/group.png" alt="">
+                  <img src="assets/img/group.png" alt="">
                   <h4><a href="#" class="">Sample Group Three</a></h4>
                   <p>This is a paragraph of intro text, or whatever I want to call it.</p>
                 </div>
@@ -93,17 +93,4 @@
         </div>
       </div>
     </section>
-
-    <footer>
-      <div class="container">
-        <p>Dobble Copyright &copy, 2015</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-  </body>
-</html>
+    <?php include "include/footer.php"; ?>
