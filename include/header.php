@@ -3,7 +3,7 @@ session_start();
 require_once "class_user.php";
 if(!isset($_SESSION['id']))
  {
-   header('location:../login.php');
+   header('location:login.php');
  }
 $user = new user();
 list($id,$name,$email,$gender,$status,$photo) = $user->getuserinfo($_SESSION['id']);

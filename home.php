@@ -7,10 +7,9 @@
         $("#com").click(function(){
             $("#comform").toggle();
         });
-    });
-
-   
+    });  
 </script>
+
 <section>
 <div class="container">
   <div class="row">
