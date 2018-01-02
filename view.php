@@ -204,7 +204,7 @@ if(isset($_GET['profileid'])) {
                     <div class="col-lg-4 col-md-5">
                         <div class="card card-user">
                             <div class="image">
-                                <img src="img/background.jpg" alt="..."/>
+                                <img src="assets/img/background.jpg" alt="..."/>
                             </div>
                             <div class="content">
                                 <div class="author">
@@ -212,7 +212,7 @@ if(isset($_GET['profileid'])) {
                       else echo "<img src='img/user.png'  class='avatar border-white' alt=''>" ;
                  ?>
                                   
-                                  <h4 class="title"><?php echo $name; ?><br />
+                                  <h4 class="title"><?= strtoupper($name); ?><br />
                                      <a href="#"><small>@<?php echo strtolower(str_replace(' ', '', $name)); ?></small></a>
                                   </h4>
                                 </div>
@@ -247,7 +247,7 @@ if(isset($_GET['profileid'])) {
                                                 <div class="row">
                                                     <div class="col-xs-3">
                                                         <div class="avatar">
-                                                            <img src="img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                            <img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6">
@@ -265,7 +265,7 @@ if(isset($_GET['profileid'])) {
                                                 <div class="row">
                                                     <div class="col-xs-3">
                                                         <div class="avatar">
-                                                            <img src="img/faces/face-1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                            <img src="assets/img/faces/face-1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6">
@@ -283,7 +283,7 @@ if(isset($_GET['profileid'])) {
                                                 <div class="row">
                                                     <div class="col-xs-3">
                                                         <div class="avatar">
-                                                            <img src="img/faces/face-3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                            <img src="assets/img/faces/face-3.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6">
